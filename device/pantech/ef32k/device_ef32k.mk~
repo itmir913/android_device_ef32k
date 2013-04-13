@@ -27,6 +27,11 @@ PRODUCT_LOCALES += mdpi
 
 # Add file
 
+
+# BOOT
+#PRODUCT_COPY_FILES += \
+#    device/pantech/ef32k/add/boot.img:boot.img
+
 # Init
 PRODUCT_COPY_FILES += \
     device/pantech/ef32k/add/init.rc:root/init.rc \
@@ -41,36 +46,32 @@ PRODUCT_COPY_FILES += \
 # bin
 PRODUCT_COPY_FILES += \
     device/pantech/ef32k/add/bin/dhcpcd:system/bin/dhcpcd \
+    device/pantech/ef32k/add/bin/aprserver:system/bin/aprserver \
+    device/pantech/ef32k/add/bin/cpmgrif:system/bin/cpmgrif \
+    device/pantech/ef32k/add/bin/akmd8975:system/bin/akmd8975 \
     device/pantech/ef32k/add/bin/installd:system/bin/installd \
     device/pantech/ef32k/add/bin/pam_server:system/bin/pam_server \
     device/pantech/ef32k/add/bin/pantech_server:system/bin/pantech_server \
     device/pantech/ef32k/add/bin/sky_localdb:system/bin/sky_localdb \
-    device/pantech/ef32k/add/bin/wpa_supplicant:system/bin/wpa_supplicant
+    device/pantech/ef32k/add/bin/wpa_supplicant:system/bin/wpa_supplicant \
+    device/pantech/ef32k/add/bin/pppd:system/bin/pppd \
+    device/pantech/ef32k/add/bin/qrngd:system/bin/qrngd \
+    device/pantech/ef32k/add/bin/qrngtest:system/bin/qrngtest
 
-# GPS
+# Add lib
 PRODUCT_COPY_FILES += \
-    device/pantech/ef32k/add/gps.conf:system/etc/gps.conf
+    device/pantech/ef32k/add/lib/libOlaEngine.so:system/lib/libOlaEngine.so \
+    device/pantech/ef32k/add/lib/libandroid_runtime.so:system/lib/libandroid_runtime.so \
+    device/pantech/ef32k/add/lib/libcamera.so:system/lib/libcamera.so \
+    device/pantech/ef32k/add/lib/libcameraservice.so:system/lib/libcameraservice.so \
+    device/pantech/ef32k/add/lib/libmedia_jni.so:system/lib/libmedia_jni.so
 
-# APN
-PRODUCT_COPY_FILES += \
-    device/pantech/ef32k/add/apns-conf.xml:system/etc/apns-conf.xml
-
-# Bluetooth
-PRODUCT_COPY_FILES += \
-    device/pantech/ef32k/add/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
+#    device/pantech/ef32k/add/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so \
 
 # KoreanIME
 PRODUCT_COPY_FILES += \
     device/pantech/ef32k/add/libjni_koreanime.so:system/lib/libjni_koreanime.so \
     device/pantech/ef32k/add/KoreanIME.apk:system/app/LatinIME.apk
-
-# lib
-PRODUCT_COPY_FILES += \
-    device/pantech/ef32k/add/libril-qc-1.so:system/lib/libril-qc-1.so
-
-# lib
-PRODUCT_COPY_FILES += \
-    device/pantech/ef32k/add/egl.cfg:system/lib/egl/egl.cfg
 
 # Device Permissions
 PRODUCT_COPY_FILES += \

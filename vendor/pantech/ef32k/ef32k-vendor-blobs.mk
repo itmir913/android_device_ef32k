@@ -25,6 +25,7 @@ PRODUCT_COPY_FILES += \
 
 # 3D
 PRODUCT_COPY_FILES += \
+    vendor/pantech/ef32k/proprietary/lib/egl/egl.cfg:system/lib/egl/egl.cfg \
     vendor/pantech/ef32k/proprietary/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
     vendor/pantech/ef32k/proprietary/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
     vendor/pantech/ef32k/proprietary/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
@@ -38,9 +39,38 @@ PRODUCT_COPY_FILES += \
     vendor/pantech/ef32k/proprietary/lib/hw/lights.msm7k.so:obj/lib/lights.msm7k.so \
     vendor/pantech/ef32k/proprietary/lib/hw/lights.msm7k.so:system/lib/hw/lights.msm7k.so
 
+# Modules
+PRODUCT_COPY_FILES += \
+    vendor/pantech/ef32k/proprietary/lib/modules/libra.ko:system/lib/modules/libra.ko \
+    vendor/pantech/ef32k/proprietary/lib/modules/librasdioif.ko:system/lib/modules/librasdioif.ko \
+    vendor/pantech/ef32k/proprietary/lib/modules/wlan.ko:system/lib/modules/wlan.ko
+
+# Wifi
+PRODUCT_COPY_FILES += \
+    vendor/pantech/ef32k/proprietary/etc/wl/nvram.txt:system/etc/wl/nvram.txt \
+    vendor/pantech/ef32k/proprietary/etc/wl/bcm4329_apsta.bin:system/etc/wl/bcm4329_apsta.bin \
+    vendor/pantech/ef32k/proprietary/etc/wl/bcm4329.bin:system/etc/wl/bcm4329.bin \
+    vendor/pantech/ef32k/proprietary/etc/wl/bcm4329_mfg.bin:system/etc/wl/bcm4329_mfg.bin \
+    vendor/pantech/ef32k/proprietary/etc/wl/bcm43291.bin:system/etc/wl/bcm43291.bin \
+    vendor/pantech/ef32k/proprietary/etc/wl/bcm43291_apsta.bin:system/etc/wl/bcm43291_apsta.bin \
+    vendor/pantech/ef32k/proprietary/etc/wl/bcm43291_mfg.bin:system/etc/wl/bcm43291_mfg.bin \
+    vendor/pantech/ef32k/proprietary/etc/wl/bcm43291_p2p.bin:system/etc/wl/bcm43291_p2p.bin \
+    vendor/pantech/ef32k/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    vendor/pantech/ef32k/proprietary/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf
+
 # Bluetoooth
 PRODUCT_COPY_FILES += \
     vendor/pantech/ef32k/proprietary/bin/BCM43291A0_003.001.013.0111.0124.hcd:system/bin/BCM43291A0_003.001.013.0111.0124.hcd
+
+# Camera
+PRODUCT_COPY_FILES += \
+    vendor/pantech/ef32k/proprietary/lib/libcamera.so:obj/lib/libcamera.so \
+    vendor/pantech/ef32k/proprietary/lib/libcamera.so:system/lib/libcamera.so \
+    vendor/pantech/ef32k/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
+    vendor/pantech/ef32k/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so \
+    vendor/pantech/ef32k/proprietary/lib/liboemcamera.so:system/lib/liboemcamera.so \
+    vendor/pantech/ef32k/proprietary/lib/libmmipl.so:system/lib/libmmipl.so \
+    vendor/pantech/ef32k/proprietary/lib/libmmjpeg.so:system/lib/libmmjpeg.so
 
 # LGE services
 PRODUCT_COPY_FILES += \
@@ -92,5 +122,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
      vendor/pantech/ef32k/proprietary/etc/01_qcomm_omx.cfg:system/etc/01_qcomm_omx.cfg \
      vendor/pantech/ef32k/proprietary/etc/vold.fstab:system/etc/vold.fstab \
-     vendor/pantech/ef32k/proprietary/etc/pvplayer.cfg:system/etc/pvplayer.cfg
+     vendor/pantech/ef32k/proprietary/etc/pvplayer.cfg:system/etc/pvplayer.cfg \
+     vendor/pantech/ef32k/proprietary/etc/gps.conf:system/etc/gps.conf \
+     vendor/pantech/ef32k/proprietary/etc/apns-conf.xml:system/etc/apns-conf.xml \
+     vendor/pantech/ef32k/proprietary/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
+     vendor/pantech/ef32k/proprietary/etc/init.brcm.bt.sh:system/etc/init.brcm.bt.sh \
+     vendor/pantech/ef32k/proprietary/etc/init.goldfish.sh:system/etc/init.goldfish.sh \
+     vendor/pantech/ef32k/proprietary/etc/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
+     vendor/pantech/ef32k/proprietary/etc/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
+     vendor/pantech/ef32k/proprietary/etc/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh
 

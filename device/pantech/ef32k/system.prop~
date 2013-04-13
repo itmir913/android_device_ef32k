@@ -1,3 +1,15 @@
 #
 # system.prop for ef32k
 #
+rild.libpath=/system/lib/libril-qc-1.so
+rild.libargs=-d /dev/smd0
+
+ro.sf.lcd_density=160
+dalvik.vm.heapsize=48m
+wifi.interface=wlan0
+
+ro.product.boardnswver=7x27 V1.46
+ro.product.baseband_ver=S0832146
+ro.product.baseband_ver_hidden=S0832146a
+ro.product.checksum=
+ro.carrier=KT-KOR
